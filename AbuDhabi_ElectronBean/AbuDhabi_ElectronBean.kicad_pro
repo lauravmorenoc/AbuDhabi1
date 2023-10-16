@@ -528,6 +528,10 @@
     [
       "c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc",
       "Power conv."
+    ],
+    [
+      "e7023770-1e68-49ab-b84d-eead5d4c3b6b",
+      "RS232adapter"
     ]
   ],
   "text_variables": {}
