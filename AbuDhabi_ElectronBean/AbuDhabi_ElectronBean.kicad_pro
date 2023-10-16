@@ -532,6 +532,10 @@
     [
       "e7023770-1e68-49ab-b84d-eead5d4c3b6b",
       "RS232adapter"
+    ],
+    [
+      "99714311-4aef-4885-b3bc-fd7f8f5fe980",
+      "RS435adapter"
     ]
   ],
   "text_variables": {}
