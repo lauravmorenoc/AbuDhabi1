@@ -349,6 +349,7 @@
     )
   )
 
+
   (junction (at 35.56 21.59) (diameter 0) (color 0 0 0 0)
     (uuid 456b1295-ff76-4b67-9c56-16f83128bce0)
   )
@@ -356,10 +357,6 @@
     (uuid e0ef0b4c-305b-4ed4-a3be-0b8fb1fbd6d2)
   )
 
-  (wire (pts (xy 69.85 27.94) (xy 73.66 27.94))
-    (stroke (width 0) (type default))
-    (uuid 0b224b6b-ada2-47c8-9e79-ca7130d422db)
-  )
   (wire (pts (xy 30.48 24.13) (xy 35.56 24.13))
     (stroke (width 0) (type default))
     (uuid 1161ebae-566c-4cc9-b1af-1422a633f28d)
@@ -387,10 +384,6 @@
   (wire (pts (xy 35.56 24.13) (xy 35.56 25.4))
     (stroke (width 0) (type default))
     (uuid 85f0c3fd-1abb-42d6-b3e0-794852b91bd3)
-  )
-  (wire (pts (xy 69.85 19.05) (xy 73.66 19.05))
-    (stroke (width 0) (type default))
-    (uuid 95d1bdec-390e-43bc-ac61-d72fd246b3cf)
   )
   (wire (pts (xy 30.48 24.13) (xy 30.48 27.94))
     (stroke (width 0) (type default))
@@ -435,11 +428,6 @@
     (uuid f2b10246-22ab-4a4f-a553-5335ae8d1a28)
   )
 
-  (wire (pts (xy 69.85 29.21) (xy 69.85 27.94))
-    (stroke (width 0) (type default))
-    (uuid ffe9a4b8-2175-4657-9863-c423a77e3814)
-  )
-
   (text "LEDs 1.0" (at 100.33 16.51 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 9472e663-c5fb-4599-b2d2-89fd2a6fd7b8)
@@ -448,39 +436,6 @@
   (hierarchical_label "5V" (shape output) (at 73.66 22.86 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 008892f3-ac2e-4b3a-8b2c-b312ba0cea26)
-  )
-  (hierarchical_label "24V" (shape output) (at 73.66 19.05 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 58a55ce6-ed86-43a6-b7d6-bc691d483b87)
-  )
-  (hierarchical_label "GND ext" (shape output) (at 73.66 27.94 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid f13f59b1-6536-4573-baa5-b438e669b244)
-  )
-
-  (symbol (lib_id "power:+24V") (at 69.85 19.05 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 066179d8-6540-4e49-92ac-288c16040bc1)
-    (property "Reference" "#PWR0109" (at 69.85 22.86 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+24V" (at 69.85 13.97 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 69.85 19.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 69.85 19.05 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 815b3543-5410-4be1-a33e-03f974121e97))
-    (instances
-      (project "AbuDhabi_ElectronBean"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
-          (reference "#PWR0109") (unit 1)
-        )
-      )
-    )
   )
 
   (symbol (lib_id "power:PWR_FLAG") (at 35.56 21.59 270) (unit 1)
@@ -500,7 +455,7 @@
     )
     (pin "1" (uuid f7c1f027-7af5-4bda-8205-a7e293b54f31))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "#FLG0101") (unit 1)
         )
@@ -525,7 +480,7 @@
     )
     (pin "1" (uuid 948c4a87-35ea-49af-b889-e9894d55c321))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "#PWR0108") (unit 1)
         )
@@ -539,10 +494,10 @@
     (property "Reference" "R1" (at 99.06 38.735 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "220" (at 99.06 41.275 0)
+    (property "Value" "1k" (at 99.06 41.275 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" (at 94.742 39.37 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 94.742 39.37 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 96.52 39.37 0)
@@ -551,7 +506,7 @@
     (pin "1" (uuid 4ddab9e7-7ec1-46d5-9075-85c79418c840))
     (pin "2" (uuid 52668fb0-d367-46a3-a910-225c8f87a102))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "R1") (unit 1)
         )
@@ -581,7 +536,7 @@
     (pin "2" (uuid 1bcc500c-2362-4ad5-aa0f-e4c6bc585d38))
     (pin "3" (uuid 70efbbc1-eacb-46d0-ae82-4346a482e63c))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "U2") (unit 1)
         )
@@ -606,7 +561,7 @@
     )
     (pin "1" (uuid ff5ef82d-602c-4964-be36-a40e76e9559c))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "#PWR0103") (unit 1)
         )
@@ -631,7 +586,7 @@
     )
     (pin "1" (uuid 4e2687b9-b5c7-4975-a8f9-515f2eed5868))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "#PWR010") (unit 1)
         )
@@ -656,7 +611,7 @@
     )
     (pin "1" (uuid 8ab8ec42-c206-4291-84a6-19f32b850e47))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "#FLG0102") (unit 1)
         )
@@ -682,7 +637,7 @@
     (pin "1" (uuid 4a768910-7bcc-432c-9ac4-7296d0e89a21))
     (pin "2" (uuid 2beeb5e9-a6f6-4ca3-965f-7a9d907d5769))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "D1") (unit 1)
         )
@@ -710,7 +665,7 @@
     )
     (pin "1" (uuid 4bed5637-876c-40b9-8ded-c747e30732f3))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
           (reference "#PWR08") (unit 1)
         )
@@ -738,34 +693,9 @@
     )
     (pin "1" (uuid 7ae8dbf8-01ef-4909-b1fd-290f75a9ee56))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "#PWR0102") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 69.85 29.21 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid baa2d977-7a4e-4d25-8c51-b636e004c6ba)
-    (property "Reference" "#PWR0104" (at 69.85 35.56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 69.85 34.29 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 69.85 29.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 69.85 29.21 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 67294e0e-f141-486a-80c9-214b55a3ec75))
-    (instances
-      (project "AbuDhabi_ElectronBean"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
-          (reference "#PWR0104") (unit 1)
         )
       )
     )
@@ -789,7 +719,7 @@
     (pin "1" (uuid 70be678f-5479-4c2f-a493-3e71a9f6a624))
     (pin "2" (uuid e21dcbd1-cb2a-4d7b-9b69-c0d8cbecfad1))
     (instances
-      (project "AbuDhabi_ElectronBean"
+      (project "AbuDhabi_ElectronBeam"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/c90f5046-40eb-4e2a-9cc6-7f8f7a86d6fc"
           (reference "J19") (unit 1)
         )
